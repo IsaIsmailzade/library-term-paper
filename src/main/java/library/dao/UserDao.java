@@ -1,7 +1,7 @@
 package library.dao;
 
-import com.example.isa.library.entity.Users;
-import com.example.isa.library.util.ConnectionManager;
+import library.entity.Users;
+import library.util.ConnectionManager;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.SneakyThrows;
