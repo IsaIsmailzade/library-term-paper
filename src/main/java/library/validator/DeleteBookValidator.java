@@ -3,7 +3,7 @@ package library.validator;
 import library.dao.BooksDao;
 import lombok.Getter;
 
-import java.lang.Error;
+import library.validator.Error;
 
 public class DeleteBookValidator implements Validator<String> {
 
@@ -17,7 +17,7 @@ public class DeleteBookValidator implements Validator<String> {
         ValidationResult validationResult = new ValidationResult();
 
         if (id == null || !id.matches(ID_PATTERN)) {
-            validationResult.add(java.lang.Error.of("bookId.invalid", "Invalid book ID format"));
+            validationResult.add(Error.of("bookId.invalid", "Invalid book ID format"));
         }
 
         if (booksDao.findById(Long.valueOf(id)).isEmpty()) {
