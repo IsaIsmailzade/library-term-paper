@@ -1,0 +1,137 @@
+/* Общие стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* Контейнер книги */
+.book-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Карточка книги */
+.book-card {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.book-title {
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.book-author {
+    font-size: 1.2rem;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.book-description {
+    font-size: 1rem;
+    color: #666666;
+    line-height: 1.5;
+}
+
+/* Секция контента */
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Секция загрузки */
+.download-section, .read-section {
+    width: 48%;
+    text-align: center;
+}
+
+.download-title, .read-title {
+    font-size: 1.5rem;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Кнопки */
+.btn-download, .btn-read {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download {
+    background-color: #6c63ff;
+    color: white;
+}
+
+.btn-download:hover {
+    background-color: #5b54e6;
+}
+
+.btn-read {
+    background-color: #4caf50; /* Зелёный цвет */
+    color: white;
+}
+
+.btn-read:hover {
+    background-color: #45a049; /* Темнее при наведении */
+}
+
+/* Кнопка назад */
+.btn-back {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #6c63ff;
+    border: 2px solid #6c63ff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #6c63ff;
+    color: white;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .download-section, .read-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .book-title {
+        font-size: 1.8rem;
+    }
+
+    .book-description {
+        font-size: 0.95rem;
+    }
+
+    .btn-download, .btn-read, .btn-back {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
